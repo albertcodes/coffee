@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: sign;
-  src: url(../fonts/alexandria-italic.ttf);
+  src: url(../fonts/alexandria-italic.ttf) format('truetype');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, figure, header, nav, section, article, aside, footer, figcaption {
@@ -99,6 +99,8 @@ global styles
 html, body {
   background: #000000;
   font-family: 'Poppins', sans-serif;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
 }
 * {
   user-select: none;
@@ -108,6 +110,9 @@ html, body {
 }
 ::-moz-selection {
   background: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 991px) {
   html, body {
@@ -139,6 +144,9 @@ html, body {
 }
 .section-heading h2 span {
   color: #fe3f40;
+}
+.disabled-link {
+  pointer-events: none;
 }
 /* 
 ---------------------------------------------
@@ -204,7 +212,7 @@ topToBottom animation
 }
 .main-blue-button a {
   display: inline-block;
-  background-color: #666AF6;
+  background-color: #fe3f40;
   font-size: 15px;
   font-weight: 400;
   color: #dedede;
@@ -265,6 +273,8 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  content: url(../logo/albertcodes-white.png);
+  height: 90px;
 }
 .header-area .main-nav .logo h4 {
   font-size: 24px;
@@ -338,7 +348,7 @@ header
   opacity: 1;
 }
 .header-area .main-nav .nav li:last-child a:hover, .background-header .main-nav .nav li:last-child a:hover {
-  background-color: #666AF6;
+  background-color:#dedede;
 }
 .header-area .main-nav .nav li.submenu {
   position: relative;
@@ -734,7 +744,7 @@ Banner Style
 }
 .main-banner:after {
   content: '';
-  background-image: url(../images/baner-dec-left.png);
+  background-image: url(../backgrounds/banner-dec-left.png);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -744,13 +754,21 @@ Banner Style
 }
 .main-banner:before {
   content: '';
-  background-image: url(../images/baner-dec-right.png);
+  background-image: url(../backgrounds/banner-dec-right.png);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
   top: 80px;
   width: 98px;
   height: 290px;
+}
+.main-banner .mode-view {
+  margin-top: -80px;
+  margin-right: 80px;
+  float: right;
+  width: 125px;
+  height: 125px;
+  content: url(../icons/astro-dark.png);
 }
 .main-banner .left-content {
   margin-right: 45px;
@@ -766,10 +784,6 @@ Banner Style
   font-weight: 700;
   color: #dedede;
   line-height: 72px;
-}
-.main-banner .left-content h2 em {
-  color: #666AF6;
-  font-style: normal;
 }
 .main-banner .left-content h2 span {
   color: #fe3f40;
@@ -820,11 +834,8 @@ Banner Style
 .main-banner .left-content form input::placeholder {
   color: #dedede;
 }
-.main-banner img {
-  opacity: 0.35;
-}
-.main-banner img:hover {
-  opacity: 0.5;
+.main-banner .profile-image img {
+  opacity: 0.7;
 }
 /* 
 ---------------------------------------------
@@ -834,38 +845,38 @@ About Us Style
 #about {
   margin-top: 120px;
 }
-.about-us {
-  background-image: url(../images/about-bg.png);
+.about-me {
+  background-image: url(../backgrounds/about-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 140px 0px 120px 0px;
 }
-.about-us .left-image {
+.about-me .left-image {
   margin-right: 45px;
 }
 @media (max-width: 992px) {
-  .about-us .left-image {
+  .about-me .left-image {
     display: none;
   }
 }
-.about-us .services .item {
+.about-me .services .item {
   margin-bottom: 30px;
 }
-.about-us .services .item .icon {
+.about-me .services .item .icon {
   float: left;
   margin-right: 25px;
 }
-.about-us .services .item .icon img {
+.about-me .services .item .icon img {
   max-width: 70px;
 }
-.about-us .services .item h4 {
+.about-me .services .item h4 {
   color: #dedede;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
 }
-.about-us .services .item p {
+.about-me .services .item p {
   color: #dedede;
 }
 
@@ -874,50 +885,50 @@ About Us Style
 Services Style
 --------------------------------------------- 
 */
-.our-services {
+.my-services {
   margin-top: 0px;
   padding-top: 120px;
 }
-.our-services .left-image {
+.my-services .left-image {
   margin-right: 45px;
 }
-.our-services .section-heading h2 {
+.my-services .section-heading h2 {
   margin-right: 100px;
   color: #dedede;
 }
-.our-services .section-heading p {
+.my-services .section-heading p {
   margin-top: 30px;
   margin-bottom: 60px;
   color: #dedede;
 }
-.our-services .progress-skill-bar {
+.my-services .progress-skill-bar {
   margin-bottom: 30px;
   position: relative;
   width: 100%;
 }
-.our-services .progress-skill-bar span {
+.my-services .progress-skill-bar span {
   position: absolute;
   top: 0;
   font-size: 18px;
   font-weight: 600;
   color: #fe3f40;
 }
-.our-services .first-bar span {
-  left: 69%;
+.my-services .first-bar span {
+  left: 79%;
 }
-.our-services .second-bar span {
-  left: 81%;
+.my-services .second-bar span {
+  left: 84%;
 }
-.our-services .third-bar span {
-  left: 88%;
+.my-services .third-bar span {
+  left: 66%;
 }
-.our-services .progress-skill-bar h4 {
+.my-services .progress-skill-bar h4 {
   font-size: 18px;
   font-weight: 700;
   color: #dedede;
   margin-bottom: 14px;
 }
-.our-services .progress-skill-bar .full-bar {
+.my-services .progress-skill-bar .full-bar {
   width: 100%;
   height: 6px;
   border-radius: 3px;
@@ -925,7 +936,7 @@ Services Style
   position: relative;
   z-index: 1;
 }
-.our-services .progress-skill-bar .filled-bar {
+.my-services .progress-skill-bar .filled-bar {
   background: rgb(255, 77, 30);
   background: linear-gradient(105deg, rgba(255, 77, 30, 1) 0%, rgba(255, 44, 109, 1) 100%);
   height: 6px;
@@ -934,25 +945,25 @@ Services Style
   position: relative;
   z-index: 2;
 }
-.our-services .first-bar .filled-bar {
+.my-services .first-bar .filled-bar {
   width: 88%;
 }
-.our-services .second-bar .filled-bar {
+.my-services .second-bar .filled-bar {
   width: 93%;
 }
-.our-services .third-bar .filled-bar {
+.my-services .third-bar .filled-bar {
   width: 75%;
 }
 /* 
 ---------------------------------------------
-Portfolio
+Toolbox
 --------------------------------------------- 
 */
-.our-portfolio {
+.my-toolbox {
   padding-top: 120px;
   margin-top: 0px;
 }
-.our-portfolio .section-heading h2 {
+.my-toolbox .section-heading h2 {
   text-align: center;
   margin: 0px 90px 0px 90px;
   margin-bottom: 120px;
@@ -960,18 +971,18 @@ Portfolio
   z-index: 1;
   color: #dedede;
 }
-.our-portfolio .item {
+.my-toolbox .item {
   position: relative;
 }
-.our-portfolio .item:hover .hidden-content {
+.my-toolbox .item:hover .hidden-content {
   top: -100px;
   opacity: 1;
   visibility: visible;
 }
-.our-portfolio .item:hover .showed-content {
+.my-toolbox .item:hover .showed-content {
   top: 90px;
 }
-.our-portfolio .hidden-content {
+.my-toolbox .hidden-content {
   background: rgb(255, 77, 30);
   background: linear-gradient(105deg, rgba(255, 77, 30, 1) 0%, rgba(255, 44, 109, 1) 100%);
   padding: 30px;
@@ -984,7 +995,7 @@ Portfolio
   z-index: 2;
   transition: all 0.5s;
 }
-.our-portfolio .hidden-content:after {
+.my-toolbox .hidden-content:after {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -997,16 +1008,16 @@ Portfolio
   background: linear-gradient(105deg, rgba(255, 52, 69, 1) 0%, rgba(255, 51, 78, 1) 100%);
   z-index: -1;
 }
-.our-portfolio .hidden-content h4 {
+.my-toolbox .hidden-content h4 {
   font-size: 20px;
   font-weight: 700;
   color: #dedede;
   margin-bottom: 20px;
 }
-.our-portfolio .hidden-content p {
+.my-toolbox .hidden-content p {
   color: #dedede;
 }
-.our-portfolio .showed-content {
+.my-toolbox .showed-content {
   top: 0px;
   position: relative;
   z-index: 3;
@@ -1017,10 +1028,10 @@ Portfolio
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 }
-.our-portfolio .showed-content img {
+.my-toolbox .showed-content img {
   max-width: 100px;
 }
-.our-portfolio i {
+.my-toolbox i {
   font-size: 65px;
   color: #fe3f40;
   margin-bottom: 2rem;
@@ -1042,37 +1053,38 @@ Portfolio
   }
 /* 
 ---------------------------------------------
-Blog
+Portfolio
 --------------------------------------------- 
 */
-.our-blog {
+.my-portfolio {
   position: relative;
   margin-top: 80px;
   padding-top: 120px;
 }
-.our-blog .section-heading h2 {
+.my-portfolio .section-heading h2 {
   color: #eee;
   margin-right: 180px;
 }
-.our-blog .top-dec {
+.my-portfolio .top-dec {
   text-align: right;
-  margin-top: -80px;
+  /* margin-top: -70px; */
+  margin-bottom: -35px;
 }
-.our-blog .top-dec img {
+.my-portfolio .top-dec img {
   max-width: 270px;
 }
-.our-blog .left-image {
+.my-portfolio .left-image {
   position: relative;
 }
-.our-blog .left-image img {
+.my-portfolio .left-image img {
   border-radius: 20px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-.our-blog .left-image .info {
+.my-portfolio .left-image .info {
   position: relative;
 }
-.our-blog .left-image .info .inner-content {
-  background-color: #666AF6;
+.my-portfolio .left-image .info .inner-content {
+  background-color: #C0C0C0;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-right: 75px;
@@ -1080,72 +1092,77 @@ Blog
   margin-top: -100px;
   padding: 30px;
 }
-.our-blog .left-image ul li {
+.my-portfolio .left-image .info .inner-content p {
+  color: #000000;
+}
+.my-portfolio .left-image ul li {
   display: inline-block;
   font-size: 15px;
-  color: #afafaf;
+  color: #000000;
   font-weight: 300;
   margin-right: 20px;
 }
-.our-blog .left-image ul li:last-child {
+.my-portfolio .left-image ul li:last-child {
   margin-right: 0px;
 }
-.our-blog .left-image ul li i {
-  color: #ff4d61;
+.my-portfolio .left-image ul li i {
+  color: #fe3f40;
   font-size: 16px;
   margin-right: 8px;
 }
-.our-blog .left-image h4 {
+.my-portfolio .left-image h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #2a2a2a;
+  color: #fe3f40;
   margin: 20px 0px 15px 0px;
 }
-.our-blog .left-image .info .main-blue-button {
+.my-portfolio .left-image .info .main-blue-button {
   position: absolute;
   bottom: -80px;
   left: 0;
 }
-.our-blog .right-list {
+.my-portfolio .right-list {
   margin-left: 30px;
 }
-.our-blog .right-list ul li {
+.my-portfolio .right-list ul li {
   display: inline-flex;
   width: 100%;
   margin-bottom: 30px;
 }
-.our-blog .right-list .left-content {
+.my-portfolio .right-list .left-content {
   margin-right: 45px;
 }
-.our-blog .right-list .left-content span {
+.my-portfolio .right-list .left-content span {
   font-size: 15px;
   color: #eee;
   font-weight: 300;
 }
-.our-blog .right-list .left-content span i {
+.my-portfolio .right-list .left-content span i {
   color: #ff4d61;
   font-size: 16px;
   margin-right: 8px;
 }
-.our-blog .right-list .left-content h4 {
+.my-portfolio .right-list .left-content h4 {
   font-size: 20px;
   font-weight: 700;
   color: #eee;
   margin: 20px 0px 15px 0px;
 }
-.our-blog .right-list .left-content p {
+.my-portfolio .right-list .left-content p {
   color: #eee;
 }
-.our-blog .right-list .right-image {
+.my-portfolio .right-list .right-image {
   width: 250px;
+  height: 219px;
   border-radius: 20px;
   background: #fe3f40;
 }
-.our-blog .right-list .right-image:hover {
+.my-portfolio .right-list .right-image:hover {
   background: transparent;
 }
-.our-blog .right-list .right-image img {
+.my-portfolio .right-list .right-image img {
   width: 250px;
+  height: 219px;
   border-radius: 20px;
   opacity: 0.35;
 }
@@ -1154,27 +1171,29 @@ Blog
 contact
 --------------------------------------------- 
 */
-.contact-us {
+.contact-me {
   padding: 160px 0px;
-  background-image: url(../images/contact-bg.png);
+  background-image: url(../backgrounds/contact-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-top: 80px;
 }
-.contact-us .section-heading h2, .contact-us .section-heading h2 em, .contact-us .section-heading h2 span {
+.contact-me .section-heading h2, .contact-me .section-heading h2 em, .contact-me .section-heading h2 span {
+  color: #dedede;
+  margin-left: 26px;
+}
+.contact-me .section-heading h4 {
   color: #dedede;
 }
-.contact-us .section-heading h4 {
-  color: #dedede;
-}
-.contact-us .section-heading p {
+.contact-me .section-heading p {
   color: #dedede;
   margin-top: 30px;
 }
-.contact-us .section-heading img {
-  width: 40%;
+.contact-me .section-heading img {
+  width: 60%;
 }
-.contact-us #status {
+.contact-me #status {
   margin-left: 2rem;
   display: inline-block;
   font-size: 15px;
@@ -1233,6 +1252,24 @@ contact
   font-size: 15px;
   font-weight: 400;
 }
+.phone-info #phonenumber {
+  display: none;
+}
+.phone-info #phone-icon:hover + #phonenumber {
+  display: contents;
+}
+.phone-info #location {
+  display: none;
+}
+.phone-info #location-icon:hover + #location {
+  display: contents;
+}
+.phone-info #job {
+  display: none;
+}
+.phone-info #job-icon:hover + #job {
+  display: contents;
+}
 form#contact .contact-dec {
   position: absolute;
   right: -166px;
@@ -1247,6 +1284,7 @@ form#contact {
   background-color: #dedede;
   padding: 60px 30px;
   border-radius: 20px;
+  width: 80%;
 }
 form#contact input {
   width: 100%;
@@ -1287,7 +1325,7 @@ form#contact textarea::placeholder {
 }
 form#contact button {
   display: inline-block;
-  background-color: #666AF6;
+  background-color: #000000;
   font-size: 15px;
   font-weight: 400;
   color: #dedede;
@@ -1386,10 +1424,10 @@ responsive
     margin-right: 0px;
     text-align: center;
   }
-  .our-portfolio .section-heading h2 {
+  .my-toolbox .section-heading h2 {
     margin: 0px 0px 80px 0px;
   }
-  .our-portfolio .item {
+  .my-toolbox .item {
     margin-bottom: 15px;
   }
   .our-blog {
@@ -1434,24 +1472,24 @@ responsive
   }
 }
 @media (max-width: 767px) {
-  .about-us .left-image {
+  .about-me .left-image {
     bottom: -280px;
   }
-  .our-blog .right-list {
+  .my-portfolio .right-list {
     margin-left: 0px;
   }
-  .our-blog .right-list ul li {
+  .my-portfolio .right-list ul li {
     display: inline-block;
     margin-top: 0px;
     padding-top: 30px;
     border-top: 1px solid #eee;
   }
-  .our-blog .right-list .left-content {
+  .my-portfolio .right-list .left-content {
     margin-right: 0px;
     width: 100%;
     margin-bottom: 15px;
   }
-  .our-blog .right-list .right-image, .our-blog .right-list .right-image img {
+  .my-portfolio .right-list .right-image, .my-portfolio .right-list .right-image img {
     width: 100%;
   }
   .phone-info h4 span {
@@ -1478,7 +1516,8 @@ color mode
 }
 .color-mode-icon:after {
   font-family: 'unicons';
-  content: '\eb65';
+  /* content: '\eb65'; */
+  content: url(../icons/light-mode.png);
   font-size: 30px;
   font-weight: 300;
   font-style: normal;
@@ -1486,7 +1525,8 @@ color mode
 }
 .color-mode-icon.active:after {
   font-family: 'unicons';
-  content: '\ea9f';
+  /* content: '\ea9f'; */
+  content: url(../icons/dark-mode.png);
   font-size: 30px;
   color: #000000;
 }
@@ -1501,8 +1541,12 @@ light mode
 .light-mode .background-header {
   background: #ffffff;
 }
+
 .light-mode .main-banner .left-content h2 {
   color: #0c0c0d;
+}
+.light-mode .main-banner .mode-view {
+  content: url(../icons/astro-light.png);
 }
 .light-mode .header-area {
   background: #eee;
@@ -1513,31 +1557,37 @@ light mode
 .light-mode .header-area .main-nav .logo h4 {
   color: #000000;
 }
-.light-mode .our-services .progress-skill-bar h4 {
+.light-mode .header-area .main-nav .logo {
+  content: url(../logo/albertcodes-black.png);
+}
+.light-mode .main-banner .profile-image img {
+  opacity: 1;
+}
+.light-mode .my-services .progress-skill-bar h4 {
   color: #000000;
 }
-.light-mode .our-services .section-heading h2 {
+.light-mode .my-services .section-heading h2 {
   color: #000000;
 }
-.light-mode .our-services .section-heading p {
+.light-mode .my-services .section-heading p {
   color: #000000;
 }
-.light-mode .our-portfolio .section-heading h2 {
+.light-mode .my-toolbox .section-heading h2 {
   color: #000000;
 }
-.light-mode .our-portfolio .showed-content {
+.light-mode .my-toolbox .showed-content {
   background-color: #000000;
 }
-.light-mode .our-blog .section-heading h2 {
+.light-mode .my-portfolio .section-heading h2 {
   color: #000000;
 }
-.light-mode .our-blog .right-list .left-content h4 {
+.light-mode .my-portfolio .right-list .left-content h4 {
   color: #000000;
 }
-.light-mode .our-blog .right-list .left-content span {
+.light-mode .my-portfolio .right-list .left-content span {
   color: #000000;
 }
-.light-mode .our-blog .right-list .left-content p {
+.light-mode .my-portfolio .right-list .left-content p {
   color: #000000;
 }
 .light-mode footer p {
