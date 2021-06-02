@@ -1,6 +1,5 @@
 ⠀⠀⠀⠀<p>
       ![poweredby](https://forthebadge.com/images/badges/powered-by-coffee.svg)
-      ![madewith](https://forthebadge.com/images/badges/made-with-javascript.svg)
       ![uses](https://forthebadge.com/images/badges/uses-badges.svg)    	
       ![lisence](https://forthebadge.com/images/badges/cc-0.svg)    	
      </p>
