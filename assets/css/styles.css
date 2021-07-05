@@ -1221,6 +1221,15 @@ Toolbox
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  .my-toolbox .item:hover .showed-content {
+    display: flex;
+    top: 90px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   .skills i {
     width: 30%;
@@ -1372,6 +1381,12 @@ Portfolio
   height: 219px;
   border-radius: 20px;
   opacity: 0.35;
+}
+
+@media (max-width: 991px) {
+  .my-portfolio .right-list {
+    margin-top: 320px;
+  }
 }
 
 /* 
@@ -1577,9 +1592,12 @@ form#contact button:hover {
   background-color: #fe3f40;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #working {
     display: none;
+  }
+  form#contact {
+    width: 100%;
   }
 }
 
