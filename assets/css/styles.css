@@ -509,7 +509,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: #fefefe;
   display: block;
   position: absolute;
   width: 30px;
@@ -518,7 +518,7 @@ header
 }
 
 .background-header .main-nav .menu-trigger span, .background-header .main-nav .menu-trigger span:before, .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .header-area .main-nav .menu-trigger span:before, .header-area .main-nav .menu-trigger span:after {
@@ -526,7 +526,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: #fefefe;
   display: block;
   position: absolute;
   width: 30px;
@@ -536,7 +536,7 @@ header
 }
 
 .background-header .main-nav .menu-trigger span:before, .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .header-area .main-nav .menu-trigger span:before, .header-area .main-nav .menu-trigger span:after {
@@ -574,11 +574,11 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -586,11 +586,11 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #1e1e1e;
+  background-color: #fefefe;
 }
 
 .header-area.header-sticky {
@@ -1863,6 +1863,87 @@ light mode
   }
 }
 
+.light-mode .header-area .main-nav .menu-trigger span, .light-mode .header-area .main-nav .menu-trigger span:before, .light-mode .header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #1e1e1e;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+}
+
+.light-mode .background-header .main-nav .menu-trigger span, .light-mode .background-header .main-nav .menu-trigger span:before, .light-mode .background-header .main-nav .menu-trigger span:after {
+  background-color: #1e1e1e;
+}
+
+.light-mode .header-area .main-nav .menu-trigger span:before, .light-mode .header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #1e1e1e;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+  width: 75%;
+}
+
+.light-mode .background-header .main-nav .menu-trigger span:before, .light-mode .background-header .main-nav .menu-trigger span:after {
+  background-color: #1e1e1e;
+}
+
+.light-mode .header-area .main-nav .menu-trigger span:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  top: -10px;
+  z-index: 10;
+}
+
+.light-mode .header-area .main-nav .menu-trigger span:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 10px;
+}
+
+.light-mode .header-area .main-nav .menu-trigger.active span, .light-mode .header-area .main-nav .menu-trigger.active span:before, .light-mode .header-area .main-nav .menu-trigger.active span:after {
+  background-color: transparent;
+  width: 100%;
+}
+
+.light-mode .header-area .main-nav .menu-trigger.active span:before {
+  -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  background-color: #1e1e1e;
+}
+
+.light-mode .background-header .main-nav .menu-trigger.active span:before {
+  background-color: #1e1e1e;
+}
+
+.light-mode .header-area .main-nav .menu-trigger.active span:after {
+  -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  background-color: #1e1e1e;
+}
+
+.light-mode .background-header .main-nav .menu-trigger.active span:after {
+  background-color: #1e1e1e;
+}
+
 .light-mode .feature-card .uil, .light-mode .navbar-light .navbar-brand, .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6, .light-mode .color-mode {
   color: #000000;
 }
@@ -1870,3 +1951,7 @@ light mode
 .light-mode .owl-carousel .owl-nav button.owl-next, .light-mode.owl-carousel .owl-nav button.owl-prev, .light-mode .owl-carousel button.owl-dot {
   color: #0c0c0d;
 }
+
+
+
+
