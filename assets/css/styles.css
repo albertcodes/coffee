@@ -1369,7 +1369,6 @@ Portfolio
   width: 250px;
   height: 219px;
   border-radius: 20px;
-  background: #fe3f40;
 }
 
 .my-portfolio .right-list .right-image:hover {
@@ -1381,12 +1380,6 @@ Portfolio
   height: 219px;
   border-radius: 20px;
   opacity: 0.35;
-}
-
-@media (max-width: 991px) {
-  .my-portfolio .right-list {
-    margin-top: 320px;
-  }
 }
 
 /* 
@@ -1760,6 +1753,52 @@ responsive
   }
   .phone-info h4 span i {
     margin-left: 0px;
+  }
+}
+@media (max-width: 991px) {
+  .my-portfolio .right-list .right-image {
+    max-width: 250px;
+    max-height: 219px;
+  } 
+  .my-portfolio .right-list .right-image img {
+    max-width: 250px;
+    max-height: 219px;
+  }
+}
+@media (max-width: 991px) {
+  .my-portfolio .right-list {
+    margin-top: 320px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 424px) {
+  .my-portfolio .right-list {
+    margin-top: 400px;
+  }
+}
+@media (max-width: 384px) {
+  .my-portfolio .right-list {
+    margin-top: 450px;
+  }
+}
+@media (max-width: 331px) {
+  .my-portfolio .right-list {
+    margin-top: 500px;
+  }
+}
+@media (max-width: 307px) {
+  .my-portfolio .right-list {
+    margin-top: 600px;
+  }
+}
+@media (max-width: 292px) {
+  .my-portfolio .right-list {
+    margin-top: 700px;
+  }
+}
+@media (max-width: 274px) {
+  .my-portfolio .right-list {
+    margin-top: 750px;
   }
 }
 
