@@ -1369,6 +1369,7 @@ Portfolio
   width: 250px;
   height: 219px;
   border-radius: 20px;
+  background: #fe3f40;
 }
 
 .my-portfolio .right-list .right-image:hover {
